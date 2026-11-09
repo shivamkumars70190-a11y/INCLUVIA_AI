@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Accessible focus ring for keyboard navigation */
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.dark :focus-visible {
+  outline-color: #60a5fa;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --tw-bg-opacity: 1 !important;
+  filter: contrast(125%);
+}
+
+.high-contrast-mode {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast-mode button,
+.high-contrast-mode a,
+.high-contrast-mode input,
+.high-contrast-mode select {
+  border-width: 2px !important;
+  border-color: #ffff00 !important;
+}
+
+.high-contrast-mode .text-slate-500,
+.high-contrast-mode .text-slate-600,
+.high-contrast-mode .text-slate-400 {
+  color: #ffff88 !important;
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+}

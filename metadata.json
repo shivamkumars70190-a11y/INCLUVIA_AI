@@ -1,0 +1,12 @@
+{
+  "name": "INCLUVIA AI — Unified AI Accessibility Platform",
+  "description": "One Intelligence. Every Ability. A unified real-time accessibility platform featuring Drishti vision assistance, Shruti speech and sign language, Gati smart navigation, and automated multilingual communication.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
